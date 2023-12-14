@@ -30,3 +30,41 @@ html, body {
     font-size: 0.8em;
     color: white;
   }
+
+  #title button {
+    width: fit-content;
+    height: fit-content;
+    background: red;
+    padding: 10px;
+    margin: 20px auto;
+  }
+  
+  .interaction .int {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    color: white;
+    background: blue;
+    display: none;
+  }
+  
+  .int img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+  
+  .wrapper {
+    width: 100vw;
+    height: fit-content;
+  }
+  
+  .label li {
+    display: flex;
+    gap: 20px;
+  }
+  

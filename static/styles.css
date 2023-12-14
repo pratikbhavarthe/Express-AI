@@ -68,3 +68,41 @@ html, body {
     gap: 20px;
   }
   
+  .label span {
+    width: 80px;
+  }
+  
+  .label {
+    display: none;
+    background: white;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+  }
+  
+  #file {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .imgFiles {
+    display: grid;
+    width: fit-content;
+    height: fit-content;
+    grid-template-columns: repeat(3, 250px);
+  }
+  
+  .inputWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .inputWrapper img {
+    width: 200px;
+    height: 200px;
+  }
+  

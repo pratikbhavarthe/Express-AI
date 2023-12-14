@@ -8,6 +8,120 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./style.css" />
-    
 </head>
+
+<body>
+    <div class="wrapper">
+      <div id="window" style="visibility: visible">
+        <div class="header">
+          <h1 class="title">AI TRAINER PROTOTYPE <br />Express AI </h1>
+          <div id="label" class="label" style="display: none">
+            <ul>
+              <li class="labelItems" style="display: none">
+                <span id="class1n" class="name">1</span>
+                <progress id="1-progress" max="1"></progress>
+                <span id="class1v" class="value"></span>
+              </li>
+              <li class="labelItems" style="display: none">
+                <span id="class2n" class="name">2</span>
+                <progress id="2-progress" max="1"></progress>
+                <span id="class2v" class="value"></span>
+              </li>
+              <li class="labelItems" style="display: none">
+                <span id="class3n" class="name">3</span>
+                <progress id="3-progress" max="1"></progress>
+                <span id="class3v" class="value"></span>
+              </li>
+              <li class="labelItems" style="display: none">
+                <span id="class4n" class="name">4</span>
+                <progress id="4-progress" max="1"></progress>
+                <span id="class4v" class="value"></span>
+              </li>
+              <li class="labelItems" style="display: none">
+                <span id="class5n" class="name">5</span>
+                <progress id="5-progress" max="1"></progress>
+                <span id="class5v" class="value"></span>
+              </li>
+              <li class="labelItems" style="display: none">
+                <span id="class6n" class="name">6</span>
+                <progress id="6-progress" max="1"></progress>
+                <span id="class6v" class="value"></span>
+              </li>
+            </ul>
+          </div>
+          <p id="howto">
+            <span style="color: #4285f4">** TRAIN MAX 6 CONDITIONS **</span>
+            <br />
+            <br /> 1. TRAIN YOUR MODEL FROM <a href="https://teachablemachine.withgoogle.com/" target="_blank" rel="noopener noreferrer">HERE →</a>
+            <br /> 2. EXPORT & DOWNLOAD THE MODEL <br /> 3. Add the model file under the folder 'tm-my-image-model' <br /> 4. ADD IMAGES FOR EACH CONDITION
+          </p>
+        </div>
+        <div class="input">
+          <div id="webcam-container"></div>
+          <button type="button" onclick="init()" id="init">start</button>
+        </div>
+        <div class="footer">FAST-TRACK DEMO VERSION <br />BY PRATIK BHAVARTHE </div>
+      </div>
+      <button id="closeBtn" onclick="toggle()" style="transform: rotate(0deg)">
+        <p>→</p>
+      </button>
+    </div>
+    <div class="interaction">
+      <div class="int" id="int1">
+        <img id="img1" />
+      </div>
+      <div class="int" id="int2">
+        <img id="img2" />
+      </div>
+      <div class="int" id="int3">
+        <img id="img3" />
+      </div>
+      <div class="int" id="int4">
+        <img id="img4" />
+      </div>
+      <div class="int" id="int5">
+        <img id="img5" />
+      </div>
+      <div class="int" id="int6">
+        <img id="img6" />
+      </div>
+    </div>
+    <div id="file">
+      <div class="imgFiles">
+        <div class="inputWrapper">
+          <label for="imgInput1"> + image for condition 1 <input type="file" accept="image/*" name="image 1" id="imgInput1" onchange="loadImage(event, 'img1')" />
+          </label>
+          <img id="img1prev" />
+        </div>
+        <div class="inputWrapper">
+          <label for="imgInput2"> + image for condition 2 <input type="file" accept="image/*" name="image 2" id="imgInput2" onchange="loadImage(event, 'img2')" />
+          </label>
+          <img id="img2prev" />
+        </div>
+        <div class="inputWrapper">
+          <label for="imgInput3"> + image for condition 3 <input type="file" accept="image/*" name="image 3" id="imgInput3" onchange="loadImage(event, 'img3')" />
+          </label>
+          <img id="img3prev" />
+        </div>
+        <div class="inputWrapper">
+          <label for="imgInput4"> + image for condition 4 <input type="file" accept="image/*" name="image 4" id="imgInput4" onchange="loadImage(event, 'img4')" />
+          </label>
+          <img id="img4prev" />
+        </div>
+        <div class="inputWrapper">
+          <label for="imgInput5"> + image for condition 5 <input type="file" accept="image/*" name="image 5" id="imgInput5" onchange="loadImage(event, 'img5')" />
+          </label>
+          <img id="img5prev" />
+        </div>
+        <div class="inputWrapper">
+          <label for="imgInput6"> + image for condition 6 <input type="file" accept="image/*" name="image 6" id="imgInput6" onchange="loadImage(event, 'img6')" />
+          </label>
+          <img id="img6prev" />
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script src="./predict.js"></script>
+  </body>
 </html>

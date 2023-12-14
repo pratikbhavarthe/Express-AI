@@ -1,0 +1,11 @@
+html, body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #ff7db0;
+  font-family: "IBM Plex Mono";
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}

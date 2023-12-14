@@ -1,11 +1,140 @@
 html, body {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  width:100vw;
+  height:100vh;
+  overflow:hidden;
   background-color: #ff7db0;
   font-family: "IBM Plex Mono";
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin: 0;
-  padding: 0;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  margin:0;
+  padding:0;
+}
+
+.wrapper {
+    width:fit-content;
+    height:fit-content;
+    position:absolute;
+    bottom:20px;
+    left:20px;
+    z-index:10;
+}
+
+#window {
+    width:fit-content;
+    height:fit-content;
+    padding: 25px;
+    background-color:#a3d6fa;
+    border-radius: 5px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.header {
+    width: 28vw;
+    color:#18332f;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+  }
+  .header a {
+    color: black;
+    font-weight: bold;
+  }
+  
+  .title {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+  }
+
+  .input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  #webcam-container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    object-fit: contain;
+    background: #fcf5e4;
+    border-radius: 5px;
+  }
+  
+  #init {
+    width: 100%;
+    padding: 16px 0;
+    background-color: #1778fb;
+    font-family: "IBM Plex Mono";
+    border: none;
+    color: white;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  
+  .footer {
+    font-size: 0.9em;
+    text-align: right;
+    color: #dc3513;
+    margin-top: 10px;
+  }
+
+  #closeBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background: #fcf5e4;
+  color: #ffb800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 25px;
+  bottom: 25px;
+  cursor: pointer;
+  border: none;
+  font-family: "IBM Plex Mono";
+  transform: rotate(0deg);
+  transition: 0.4s;
+}
+
+#closeBtn p {
+  font-size: 30px;
+  transform: rotate(135deg);
+  margin-left: 6px;
+}
+
+/* for interaction images */
+.interaction .int {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: 0;
+  transition: 0.3s;
+}
+
+.int img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* for label */
+.label li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }

@@ -34,7 +34,7 @@ html, body {
 
 .header {
     width: 28vw;
-    color:#18332f;
+    color:#574cfa;
     display: flex;
     gap: 30px;
     flex-direction: column;
@@ -92,7 +92,7 @@ html, body {
   height: 40px;
   border-radius: 5px;
   background: #fcf5e4;
-  color: #ffb800;
+  color: #0057cc;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -138,3 +138,33 @@ html, body {
   justify-content: space-between;
   width: 100%;
 }
+
+.name {
+    width: 80px;
+  }
+  
+  progress {
+    border-radius: 5px;
+    display: block;
+    height: 10px;
+    background: #fcf5e4;
+    width: 60%;
+  }
+  progress::-webkit-progress-value {
+    background-color: #1778fb;
+    border-radius: 5px;
+  }
+  progress::-webkit-progress-bar {
+    border-radius: 5px;
+    background: #fcf5e4;
+  }
+  .label {
+    display: none;
+    width: 100%;
+    height: fit-content;
+  }
+  
+  .label ul {
+    padding: 0;
+    width: 100%;
+  }
